@@ -1,0 +1,142 @@
+[28-Nov-2018 10:55:04.149 CET] INFO <WorkdayAccessController> [SRT] : About to call Action with noPrivileges. Call uuid=1101040576 class=com.capeclear.utils.net.SSLUtils The stack trace that follows is for informational purposes: java.lang.RuntimeException: About to call Action with noPrivileges. Call uuid=1101040576 class=com.capeclear.utils.net.SSLUtils
+	at com.capeclear.utils.WorkdayAccessController.logDoUnprivCall(WorkdayAccessController.java:426)
+	at com.capeclear.utils.WorkdayAccessController.doPrivileged(WorkdayAccessController.java:225)
+	at com.capeclear.utils.net.SSLUtils.initSSL(SSLUtils.java:127)
+	at com.capeclear.capeconnect.transport.http.HttpEndpoint.<clinit>(HttpEndpoint.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.capeclear.capeconnect.transport.EndpointFactory.create(EndpointFactory.java:112)
+	at com.capeclear.capeconnect.transport.http.server.HttpRequestResponseReaderWriter.processHeaders(HttpRequestResponseReaderWriter.java:371)
+	at com.capeclear.capeconnect.transport.http.server.HttpRequestResponseReaderWriter.requestToMessage(HttpRequestResponseReaderWriter.java:239)
+	at com.workday.mediation.slave.client.SlaveUtils.readRequest(SlaveUtils.java:139)
+	at com.workday.mediation.slave.runtime.servlets.AssemblyDebugServlet.doPost(AssemblyDebugServlet.java:185)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+
+[28-Nov-2018 10:55:04.152 CET] INFO <WorkdayAccessController> [SRT] : Potentially Unneccessary DoPrivilege() call encountered. Call uuid=1101040576 class=com.capeclear.utils.net.SSLUtils The stack trace that follows is for informational purposes: java.lang.RuntimeException: Potentially Unneccessary DoPrivilege() call encountered. Call uuid=1101040576 class=com.capeclear.utils.net.SSLUtils
+	at com.capeclear.utils.WorkdayAccessController.logUnnecessaryDoPrivilegeUsage(WorkdayAccessController.java:373)
+	at com.capeclear.utils.WorkdayAccessController.doPrivileged(WorkdayAccessController.java:231)
+	at com.capeclear.utils.net.SSLUtils.initSSL(SSLUtils.java:127)
+	at com.capeclear.capeconnect.transport.http.HttpEndpoint.<clinit>(HttpEndpoint.java:41)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.capeclear.capeconnect.transport.EndpointFactory.create(EndpointFactory.java:112)
+	at com.capeclear.capeconnect.transport.http.server.HttpRequestResponseReaderWriter.processHeaders(HttpRequestResponseReaderWriter.java:371)
+	at com.capeclear.capeconnect.transport.http.server.HttpRequestResponseReaderWriter.requestToMessage(HttpRequestResponseReaderWriter.java:239)
+	at com.workday.mediation.slave.client.SlaveUtils.readRequest(SlaveUtils.java:139)
+	at com.workday.mediation.slave.runtime.servlets.AssemblyDebugServlet.doPost(AssemblyDebugServlet.java:185)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+
+[28-Nov-2018 10:55:04.162 CET] INFO <FileBackedManagedData> FBMD System properties on startup: cc.fbmd.threshold=100KB, wd.fbmd.file.obfuscate=true defaultDir=C:\Users\KATARZ~1\AppData\Local\Temp statsThreshold=3221225472
+[28-Nov-2018 10:55:04.210 CET] INFO <FileSystemXmlApplicationContext> Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@71685b75: startup date [Wed Nov 28 10:55:04 CET 2018]; parent: org.springframework.context.support.ClassPathXmlApplicationContext@271f18d3
+[28-Nov-2018 10:55:04.211 CET] INFO <XmlBeanDefinitionReader> Loading XML bean definitions from URL [file:C:/Users/KATARZ~1/AppData/Local/Temp/tmp_5831711603922332049.tmp]
+[28-Nov-2018 10:55:04.322 CET] INFO <AssemblyDebuggerImpl> Connecting session: 2207246f-06f3-4168-ad88-f0278db704ba
+[28-Nov-2018 10:55:04.324 CET] INFO <DebugManagerImpl> Debugger checker thread started
+[28-Nov-2018 10:55:04.369 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=getPymnt-WWS]
+[28-Nov-2018 10:55:04.371 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=getPymnt-WWS]
+[28-Nov-2018 10:55:04.383 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=Write-PDF-File,stepId=WriteDesign]
+[28-Nov-2018 10:55:04.384 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=Write-PDF-File,stepId=WriteDesign]
+[28-Nov-2018 10:55:04.398 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=getReporInvoiceData]
+[28-Nov-2018 10:55:04.399 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=getReporInvoiceData]
+[28-Nov-2018 10:55:04.490 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=Write-PDF-File,stepId=Eval]
+[28-Nov-2018 10:55:04.490 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=Write-PDF-File,stepId=Eval]
+[28-Nov-2018 10:55:04.502 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=InitParms,stepId=Props]
+[28-Nov-2018 10:55:04.503 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=InitParms,stepId=Props]
+[28-Nov-2018 10:55:04.518 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=Generate-PDF]
+[28-Nov-2018 10:55:04.518 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=Generate-PDF]
+[28-Nov-2018 10:55:04.528 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=Write-PDF-File,stepId=Copy]
+[28-Nov-2018 10:55:04.529 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=Write-PDF-File,stepId=Copy]
+[28-Nov-2018 10:55:04.540 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=CreateRptXML,stepId=XsltPlus]
+[28-Nov-2018 10:55:04.541 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[setBreakpoint], location=[applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=CreateRptXML,stepId=XsltPlus]
+[28-Nov-2018 10:55:05.054 CET] INFO <CollectionsServlet> [SRT] Tenant confidence level: prod, environment: dev
+[28-Nov-2018 10:55:05.055 CET] INFO <SlaveRuntime> [SRT] Deleting content in folder: C:\Users\KATARZ~1\AppData\Local\Temp\com.workday.slave-temp
+[28-Nov-2018 10:55:05.056 CET] INFO <SlaveRuntime> [SRT] Content in folder [C:\Users\KATARZ~1\AppData\Local\Temp\com.workday.slave-temp] successfully deleted.
+[28-Nov-2018 10:55:05.060 CET] INFO <LoggingManagerImpl> [SRT] About to delete files inside directory C:\Users\katarzynak\Documents\RemittanceInnovate\.metadata\.plugins\com.workday.assembly.debug.core\swork1\logs\debug-init
+[28-Nov-2018 10:55:05.063 CET] INFO <LoggingManagerImpl> [SRT] About to delete files inside directory C:\Users\katarzynak\Documents\RemittanceInnovate\.metadata\.plugins\com.workday.assembly.debug.core\swork1\logs\debug-requests
+[28-Nov-2018 10:55:08.149 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:08.155 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:08.176 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:11.638 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:11.638 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:13.409 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:13.410 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:13.413 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:15.153 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:15.154 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:15.968 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:15.969 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:15.978 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:20.545 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:20.545 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:23.885 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:23.885 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:23.888 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:25.668 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:25.668 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:55:26.650 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:26.650 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:26.654 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:28.273 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:28.273 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:28.501 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:28.501 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:28.504 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:29.034 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:29.034 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:30.197 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:30.197 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:30.199 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:38.698 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:38.698 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:38.858 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:38.859 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:38.861 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:40.981 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:40.981 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:41.216 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:41.217 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:41.219 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:55:42.742 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:42.743 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[stepOver], thread=[34]
+[28-Nov-2018 10:55:43.306 CET] INFO <AssemblyDebuggerImpl> Getting suspended thread for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:43.307 CET] INFO <AssemblyDebuggerImpl> Getting stack frames for session '2207246f-06f3-4168-ad88-f0278db704ba', thread '34'
+[28-Nov-2018 10:55:43.310 CET] INFO <AssemblyDebuggerImpl> 1 stack frames for thread '34'
+[28-Nov-2018 10:56:04.953 CET] INFO <AssemblyDebuggerImpl> Session request: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:56:04.953 CET] INFO <AssemblyDebuggerImpl> Session request complete: 2207246f-06f3-4168-ad88-f0278db704ba, request type=[resume], thread=[34]
+[28-Nov-2018 10:56:05.522 CET] INFO <AssemblyDebuggerImpl> Disconnecting session: 2207246f-06f3-4168-ad88-f0278db704ba
+[28-Nov-2018 10:56:05.523 CET] INFO <DebugManagerImpl> Removing debug session '2207246f-06f3-4168-ad88-f0278db704ba'
+[28-Nov-2018 10:56:05.523 CET] INFO <DebugManagerImpl> Debugger checker thread stopped
+[28-Nov-2018 10:56:05.523 CET] INFO <DebugManagerImpl> Debug session '2207246f-06f3-4168-ad88-f0278db704ba' removed

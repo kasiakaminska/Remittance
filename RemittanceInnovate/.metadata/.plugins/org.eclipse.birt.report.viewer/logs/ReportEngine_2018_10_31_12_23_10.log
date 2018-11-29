@@ -1,0 +1,2 @@
+Oct 31, 2018 12:31:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:org.eclipse.birt.data.engine.api.querydefn.ConditionalExpression@1b88d191

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.birt.report.debug.ui.launchConfigurationType.script">
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="report.file.name" value="C:\Users\katarzynak\Documents\RemittanceInnovate\Supplier_Remittance_PDF\ws\WSAR-INF\report_designs\Supplier_Remittance_Statement_Electronic_v1.1.rptdesign"/>
+</launchConfiguration>

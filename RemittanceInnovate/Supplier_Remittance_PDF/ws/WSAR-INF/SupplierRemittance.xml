@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<wd:Report_Data
+    xmlns:wd="urn:com.workday/bsvc"
+    xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <wd:Report_Entry>
+        <wd:Remittance_Header>
+            <wd:Company_Name/>
+            <wd:Company_Address1>Polaris House</wd:Company_Address1>
+            <wd:Company_Address2>North Star Avenue</wd:Company_Address2>
+            <wd:Company_Address3/>
+            <wd:Company_City>Swindon</wd:Company_City>
+            <wd:Company_State>WIL</wd:Company_State>
+            <wd:Company_Postal>SN2 1FL</wd:Company_Postal>
+            <wd:Company_Phone/>
+            <wd:Supplier_Name>100%OPEN</wd:Supplier_Name>
+            <wd:Supplier_Address1>HUCKLETREE SHOREDITCH</wd:Supplier_Address1>
+            <wd:Supplier_Address2>ALPHABETA BUILDING</wd:Supplier_Address2>
+            <wd:Supplier_Address3>18 FINSBURY SQUARE</wd:Supplier_Address3>
+            <wd:Supplier_City>LONDON</wd:Supplier_City>
+            <wd:Supplier_State/>
+            <wd:Postal_Code>EC2A 1AH</wd:Postal_Code>
+            <wd:Supplier_Country>GBR</wd:Supplier_Country>
+            <wd:Supplier_Ref_ID>81003157</wd:Supplier_Ref_ID>
+            <wd:Payment_Date>2018-09-04</wd:Payment_Date>
+            <wd:Payment_Reference_ID>002192</wd:Payment_Reference_ID>
+            <wd:Payment_Amount>54718</wd:Payment_Amount>
+            <wd:Currency>GBP</wd:Currency>
+            <wd:Payment_Category>SUPPLIER</wd:Payment_Category>
+            <wd:BankAccount>******7589</wd:BankAccount>
+        </wd:Remittance_Header>
+        <wd:Payment_Details>
+            <wd:Invoice_Number>100142</wd:Invoice_Number>
+            <wd:Invoice_Date>2018-07-31-07:00</wd:Invoice_Date>
+            <wd:Invoice_Gross_Amount>27359</wd:Invoice_Gross_Amount>
+            <wd:Invoice_Discount>0</wd:Invoice_Discount>
+            <wd:Invoice_Tax_Amount>0</wd:Invoice_Tax_Amount>
+            <wd:Invoice_Paid_Amount>27359</wd:Invoice_Paid_Amount>
+        </wd:Payment_Details>
+        <wd:Payment_Details>
+            <wd:Invoice_Number>100125</wd:Invoice_Number>
+            <wd:Invoice_Date>2018-07-01-07:00</wd:Invoice_Date>
+            <wd:Invoice_Gross_Amount>27359</wd:Invoice_Gross_Amount>
+            <wd:Invoice_Discount>0</wd:Invoice_Discount>
+            <wd:Invoice_Tax_Amount>0</wd:Invoice_Tax_Amount>
+            <wd:Invoice_Paid_Amount>27359</wd:Invoice_Paid_Amount>
+        </wd:Payment_Details>
+    </wd:Report_Entry>
+</wd:Report_Data>

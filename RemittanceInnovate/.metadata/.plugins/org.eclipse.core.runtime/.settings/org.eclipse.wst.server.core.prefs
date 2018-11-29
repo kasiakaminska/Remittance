@@ -1,0 +1,5 @@
+auto-publish-local=false
+auto-publish-remote=false
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime id\="Workday Runtime" location\="C\:/Users/katarzynak/AppData/Local/WD/studio/plugins/com.workday.wtp.cloud.runtime.a_2018.36.2020/" name\="Workday Runtime" runtime-type-id\="com.workday.cloud.runtime.wdscl" timestamp\="25"/>\r\n</runtimes>\r\n

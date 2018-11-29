@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.workday.cloud.integration.debug.launch.launchConfigurationType">
+<booleanAttribute key="SLAVE_ARG_HTTPS_PROXY_ECLIPSE" value="true"/>
+<booleanAttribute key="SLAVE_ARG_HTTPS_PROXY_ENABLED" value="false"/>
+<stringAttribute key="SLAVE_ARG_HTTPS_PROXY_HOST" value=""/>
+<stringAttribute key="SLAVE_ARG_HTTPS_PROXY_PORT" value=""/>
+<stringAttribute key="SLAVE_ARG_HTTPS_PROXY_PWD" value=""/>
+<stringAttribute key="SLAVE_ARG_HTTPS_PROXY_USER" value=""/>
+<intAttribute key="ad.session.connect.retries" value="40"/>
+<intAttribute key="ad.session.connect.retries.delay" value="100"/>
+<intAttribute key="ad.session.wait.start.max.iter" value="60"/>
+<stringAttribute key="cc.fbmd.threshold" value="100"/>
+<stringAttribute key="cc.requestid.logs.location" value="%SLAVE_ARG_SUB_SLAVE_WORKING_ROOT%logs"/>
+<stringAttribute key="com.workday.cloud.collection.name" value="Supplier_Remittance_PDF_collection"/>
+<stringAttribute key="com.workday.cloud.environment" value="Sandbox"/>
+<mapAttribute key="com.workday.cloud.launch.param.crfdefaults"/>
+<mapAttribute key="com.workday.cloud.launch.param.modes">
+<mapEntry key="File Reference GL" value="literal"/>
+</mapAttribute>
+<listAttribute key="com.workday.cloud.launch.param.optionsFile Reference GL"/>
+<mapAttribute key="com.workday.cloud.launch.param.singularity"/>
+<mapAttribute key="com.workday.cloud.launch.param.types">
+<mapEntry key="File Reference GL" value="number"/>
+</mapAttribute>
+<mapAttribute key="com.workday.cloud.launch.params">
+<mapEntry key="File Reference GL" value=""/>
+</mapAttribute>
+<stringAttribute key="com.workday.cloud.project" value="Supplier_Remittance_PDF"/>
+<stringAttribute key="com.workday.cloud.workday.in.id" value="StartHere"/>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<listAttribute key="ret.service.doc.urls"/>
+<stringAttribute key="ret.service.option" value=""/>
+<intAttribute key="wait.preceding.bp.steps" value="60"/>
+<booleanAttribute key="wd.any.unused.port" value="true"/>
+<stringAttribute key="wd.slave.deploy.dir" value="%SLAVE_ARG_SUB_SLAVE_WORKING_ROOT%deploy"/>
+<stringAttribute key="wd.slave.deploy.url" value="%SLAVE_ARG_SUB_SLAVE_WORKING_ROOT%deploy"/>
+<stringAttribute key="wd.slave.hostname" value="localhost"/>
+<intAttribute key="wd.slave.http.port" value="8093"/>
+<intAttribute key="wd.slave.https.port" value="8443"/>
+<intAttribute key="wd.slave.java.debug.port" value="5005"/>
+<stringAttribute key="wd.slave.protocol" value="http"/>
+<stringAttribute key="wd.slave.tmp.dir" value="%SLAVE_ARG_SUB_SLAVE_WORKING_ROOT%tmp"/>
+<booleanAttribute key="wd.ssl.accept.all" value="true"/>
+</launchConfiguration>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.workday.raas.ui.wizard.ConfigureRaaSWizard">
+		<item value="true" key="simpleFormat"/>
+		<item value="false" key="pref.owner.only"/>
+		<item value="true" key="pref.is.ws.enable_"/>
+	</section>
+</section>

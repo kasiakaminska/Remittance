@@ -1,0 +1,8 @@
+FIX_PROPERTIES_ONLY_ONCE_FLAG=FIX_PROPERTIES_ONLY_ONCE_FLAG
+cc.wtp.server.publish.startup.flag=cc.wtp.server.publish.startup.flag.value
+eclipse.preferences.version=1
+error.log.events.startup.flag=error.log.events.startup.flag.value
+wd.subclipse.svn.adapter.flag=wd.subclipse.svn.adapter.flag.value
+wd.wtp.html.validator.startup.flag=wd.wtp.html.validator.startup.flag.value
+wd.wtp.xml.file.no.grammar.startup.flag=wd.wtp.xml.file.no.grammar.startup.flag.value
+wd.xsl.validate.parameter.names.startup.flag=WD_XSL_VALIDATE_PARAMETER_NAMES_STARTUP_FLAG_VALUE

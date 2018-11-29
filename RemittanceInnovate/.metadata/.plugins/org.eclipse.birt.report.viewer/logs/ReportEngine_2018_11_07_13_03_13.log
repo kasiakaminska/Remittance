@@ -1,0 +1,4 @@
+Nov 07, 2018 2:17:07 PM org.eclipse.birt.report.model.parser.ModuleReader readModule
+SEVERE: Line Number:618 Error Code:Error.XMLParserException.EXCEPTION Exception:org.eclipse.birt.report.model.parser.DesignParserException: The element property name or structure member name is required. Message:A generic exception occurred. 
+Nov 07, 2018 2:17:07 PM org.eclipse.birt.report.model.parser.ModuleReader readModule
+SEVERE: Line Number:624 Error Code:Error.XMLParserException.SAX_ERROR Exception:org.xml.sax.SAXParseException; lineNumber: 624; columnNumber: 15; The element type "structure" must be terminated by the matching end-tag "</structure>". Message:SAX detected an error with the basic XML syntax of the file. 

@@ -1,0 +1,74 @@
+[28-Nov-2018 12:25:04.364 CET] INFO <CollectionsServlet> [SRT] Post request collection = [Supplier_Remittance_PDF_collection]
+[28-Nov-2018 12:25:04.765 CET] INFO <DeployedCloudCollection[Supplier_Remittance_PDF_collection]> [SRT] Starting all assemblies...
+[28-Nov-2018 12:25:04.767 CET] INFO <DeployedCloudCollection[Supplier_Remittance_PDF_collection]> [SRT] Saxon version SAXON_97 selected for this collection by the assembly version mapping algorithm. (See https://confluence.workday.com/x/I41RLg)
+[28-Nov-2018 12:25:04.805 CET] INFO <FileSystemXmlApplicationContext> Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@6aed5197: startup date [Wed Nov 28 12:25:04 CET 2018]; parent: org.springframework.context.support.ClassPathXmlApplicationContext@271f18d3
+[28-Nov-2018 12:25:04.806 CET] INFO <XmlBeanDefinitionReader> Loading XML bean definitions from URL [file:C:/Users/KATARZ~1/AppData/Local/Temp/tmp_6496218851185800346.tmp]
+[28-Nov-2018 12:25:05.116 CET] INFO <CollectionsServlet> [SRT] Collection: Supplier_Remittance_PDF_collection took 631ms to deploy.
+[28-Nov-2018 12:25:05.125 CET] INFO <SlaveRequestTracker> [SRT] Initial memory: 345
+[28-Nov-2018 12:25:05.133 CET] INFO <SlaveRequestProcessor> [SRT] Starting processsing - request=c5e001dae52701f4b47fcc281f1b7119, commonId=ESB|9056de71-5083-4a4e-8826-733dc077f41e, tenant=innovateuk -  Supplier_Remittance_PDF_collection/Supplier_Remittance_PDF_collection.Supplier_Remittance_PDF/StartHere
+[28-Nov-2018 12:25:05.133 CET] INFO <SlaveRequestProcessor> [SRT] Common ID for jobc5e001dae52701f4b47fcc281f1b7119 set in the assembly audit to: ESB|9056de71-5083-4a4e-8826-733dc077f41e
+[28-Nov-2018 12:25:05.475 CET] INFO <CollectionsServlet> [SRT] Finished post request on collection = [Supplier_Remittance_PDF_collection]
+[28-Nov-2018 12:25:06.112 CET] WARN <PropertyBootstrapper> wd.home not set! Cannot load default properties file.
+[28-Nov-2018 12:25:06.247 CET] WARN <SlaveMessagePersister> [SRT] No messageId available in new context after doing POST (store)
+[28-Nov-2018 12:25:06.523 CET] WARN <SlaveMessagePersister> [SRT] No messageId available in new context after doing POST (store)
+[28-Nov-2018 12:25:06.551 CET] WARN <WorkdayInHelperDestination> Retrieval Service - No documents have been retrieved.
+[28-Nov-2018 12:25:06.565 CET] WARN <SlaveMessagePersister> [SRT] No messageId available in new context after doing POST (store)
+[28-Nov-2018 12:25:06.974 CET] WARN <SlaveMessagePersister> [SRT] No messageId available in new context after doing POST (store)
+[28-Nov-2018 12:25:06.993 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspending
+[28-Nov-2018 12:25:06.993 CET] INFO <DebugManagerImpl> Added suspended thread 'threadId=34,isSuspended=true,isStepping=false,location=<no location>'
+[28-Nov-2018 12:25:06.996 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:10.023 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:25:10.023 CET] INFO <DebugManagerImpl> Removed suspended thread 34, threadId=34,isSuspended=false,isStepping=false,location=applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=InitParms,stepId=Props
+[28-Nov-2018 12:25:11.830 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspending
+[28-Nov-2018 12:25:11.830 CET] INFO <DebugManagerImpl> Added suspended thread 'threadId=34,isSuspended=true,isStepping=false,location=<no location>'
+[28-Nov-2018 12:25:11.830 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:13.314 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:25:13.315 CET] INFO <DebugManagerImpl> Removed suspended thread 34, threadId=34,isSuspended=false,isStepping=false,location=applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=getPymnt-WWS
+[28-Nov-2018 12:25:13.777 CET] INFO <wcc_DEFAULT> Processing remittance for supplier ADS GROUP LTD for settlement run number  
+[28-Nov-2018 12:25:13.987 CET] INFO <DebugManagerImpl> Thread 34 exiting assembly framework has session 8a008872-3f29-4bb0-bee9-16ea279227a1
+[28-Nov-2018 12:25:13.987 CET] INFO <DebugManagerImpl> Removed session for thread: 34, reason: onThreadExit
+[28-Nov-2018 12:25:13.988 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspending
+[28-Nov-2018 12:25:13.989 CET] INFO <DebugManagerImpl> Added suspended thread 'threadId=34,isSuspended=true,isStepping=false,location=<no location>'
+[28-Nov-2018 12:25:13.989 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:15.609 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:25:15.611 CET] INFO <DebugManagerImpl> Removed suspended thread 34, threadId=34,isSuspended=false,isStepping=false,location=applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,componentId=getReporInvoiceData
+[28-Nov-2018 12:25:15.612 CET] INFO <WorkdayOutRestTransport> REST Method Type not set, defaulting to GET.
+[28-Nov-2018 12:25:17.829 CET] INFO <DebugManagerImpl> Thread 34 exiting assembly framework has session 8a008872-3f29-4bb0-bee9-16ea279227a1
+[28-Nov-2018 12:25:17.829 CET] INFO <DebugManagerImpl> Removed session for thread: 34, reason: onThreadExit
+[28-Nov-2018 12:25:17.830 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspending
+[28-Nov-2018 12:25:17.830 CET] INFO <DebugManagerImpl> Added suspended thread 'threadId=34,isSuspended=true,isStepping=false,location=<no location>'
+[28-Nov-2018 12:25:17.830 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:25.634 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:25:25.637 CET] INFO <DebugManagerImpl> Removed suspended thread 34, threadId=34,isSuspended=false,isStepping=false,location=applicationId=Supplier_Remittance_PDF,serviceId=Supplier_Remittance_PDF,assemblyId=WorkdayAssembly,mediationId=CreateRptXML,stepId=XsltPlus
+[28-Nov-2018 12:25:26.499 CET] WARN <SaxonXsltRuntime> The stylesheet mode is not declared as streamable, so providing document as StreamSource or SAXSource might still result in extensive memory consumption.
+[28-Nov-2018 12:25:26.548 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspending
+[28-Nov-2018 12:25:26.548 CET] INFO <DebugManagerImpl> Added suspended thread 'threadId=34,isSuspended=true,isStepping=false,location=<no location>'
+[28-Nov-2018 12:25:26.548 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:44.162 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:25:44.162 CET] INFO <SuspendedThreadImpl> Thread id 34 state is stepping
+[28-Nov-2018 12:25:44.163 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:44.163 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:44.978 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:25:44.979 CET] INFO <SuspendedThreadImpl> Thread id 34 state is stepping
+[28-Nov-2018 12:25:44.979 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:25:44.979 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:26:07.400 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:26:07.400 CET] INFO <SuspendedThreadImpl> Thread id 34 state is stepping
+[28-Nov-2018 12:26:07.470 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:26:07.470 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:26:10.559 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:26:10.559 CET] INFO <SuspendedThreadImpl> Thread id 34 state is stepping
+[28-Nov-2018 12:26:10.559 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:26:10.559 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:26:12.309 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:26:12.309 CET] INFO <SuspendedThreadImpl> Thread id 34 state is stepping
+[28-Nov-2018 12:26:12.578 CET] WARN <FeatureFlags> Attempting to resolve an undefined xpresso feature in FeatureFlags.isFeatureEnabledTenanted: Enable BIRT 470 In Print Pdf Step, returning FALSE
+[28-Nov-2018 12:26:12.583 CET] INFO <LocalOutTransport> Invalid app problem:
+newApplication == BIRTEngine442
+different app ctx, appName == wcc
+otherAppCtx still null
+
+[28-Nov-2018 12:26:12.590 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:26:12.590 CET] INFO <SuspendedThreadImpl> Thread id 34 state is suspended
+[28-Nov-2018 12:27:28.117 CET] INFO <SuspendedThreadImpl> Thread id 34 state is running
+[28-Nov-2018 12:27:28.122 CET] INFO <DebugManagerImpl> Removed suspended thread 34, 

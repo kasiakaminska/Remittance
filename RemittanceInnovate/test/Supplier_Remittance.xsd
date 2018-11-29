@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wd="urn:com.workday/bsvc"
+  xmlns:nyw="urn:com.netyourwork/aod" elementFormDefault="qualified"
+  attributeFormDefault="qualified" targetNamespace="urn:com.workday/bsvc">
+  <xsd:element name="Report_Data" type="wd:Report_DataType"/>
+  <xsd:element name="Execute_Report" type="wd:Execute_ReportType"/>
+  <xsd:simpleType name="RichText">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Report_ParametersType">
+    <xsd:sequence/>
+  </xsd:complexType>
+  <xsd:complexType name="Report_EntryType">
+    <xsd:sequence>
+      <xsd:element name="Remittance_Header" type="wd:Remittance_HeaderType" minOccurs="0"/>
+      <xsd:element name="Payment_Details" type="wd:Payment_DetailsType" minOccurs="0" maxOccurs="unbounded"/>      
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Remittance_HeaderType">
+    <xsd:sequence>
+      <xsd:element name="Company_Name" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_Address1" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_Address2" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_Address3" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_City" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_State" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_Postal" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Company_Phone" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_Name" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_Address1" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_Address2" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_Address3" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_City" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_State" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Postal_Code" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_Country" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Supplier_Ref_ID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Payment_Date" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="Payment_Reference_ID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Payment_Amount" type="xsd:decimal" minOccurs="0"/> 
+      <xsd:element name="Currency" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Payment_Category" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BankAccount" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BankAccountName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BankSortCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SupplierID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SupplierEmail" type="xsd:string" minOccurs="0"/>      
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Payment_DetailsType">
+    <xsd:sequence>
+      <xsd:element name="Invoice_Number" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Invoice_Date" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="Invoice_Gross_Amount" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="Invoice_Discount" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="Invoice_Tax_Amount" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="Invoice_Paid_Amount" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="InvoiceDescription" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ClaimNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SupplierCategory" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>  
+  <xsd:complexType name="Report_DataType">
+    <xsd:sequence>
+      <xsd:element name="Report_Entry" type="wd:Report_EntryType" minOccurs="0"
+        maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Execute_ReportType">
+    <xsd:sequence>
+      <xsd:element name="Report_Parameters" type="wd:Report_ParametersType" minOccurs="0"/>
+      <xsd:element name="Authentication" type="wd:AuthenticationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuthenticationType">
+    <xsd:sequence>
+      <xsd:element name="Proxy_User_Name" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

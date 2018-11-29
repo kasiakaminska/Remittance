@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+  <source-attachment entry="C:/Users/katarzynak/AppData/Local/WD/studio/plugins/com.workday.wtp.cloud.runtime.a_2018.36.2020/lib/capeconnect-esbcore_2.10-7.1.123.jar" runtime-id="Workday Runtime" source-attachment-path="C:/Users/katarzynak/AppData/Local/WD/studio/plugins/com.workday.wtp.cloud.runtime.a_2018.36.2020/lib/wd-cc-src.jar">
+    <attribute name="javadoc_location" value="jar:file:/C:/Users/katarzynak/AppData/Local/WD/studio/plugins/com.workday.wtp.cloud.runtime.a_2018.36.2020/lib/javadoc.zip!/"/>
+  </source-attachment>
+</classpath>

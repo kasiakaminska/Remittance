@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="1" hostname="workday.com" id="Workday Production" name="Workday Production" runtime-id="Workday Runtime" server-type="com.workday.cloud.server.wdscl.external" server-type-id="com.workday.cloud.server.wdscl.external" start-timeout="75" stop-timeout="30" timestamp="1"/>
+  <server auto-publish-setting="1" hostname="workday.com" id="Workday Sandbox" name="Workday Sandbox" runtime-id="Workday Runtime" server-type="com.workday.cloud.server.wdscl.external" server-type-id="com.workday.cloud.server.wdscl.external" start-timeout="75" stop-timeout="30" timestamp="2">
+    <list key="Workday_Server_Modules_List" value0="com.workday.wtp.ws.cloud.assembly.module:Supplier_Remittance_PDF_collection"/>
+    <list key="modules" value0="Supplier_Remittance_PDF_collection::com.workday.wtp.ws.cloud.assembly.module:Supplier_Remittance_PDF_collection::cc.ws.cloud.assembly::1.0"/>
+  </server>
+  <server auto-publish-setting="1" hostname="workday.com" id="Workday Implementation" name="Workday Implementation" runtime-id="Workday Runtime" server-type="com.workday.cloud.server.wdscl.external" server-type-id="com.workday.cloud.server.wdscl.external" start-timeout="75" stop-timeout="30" timestamp="2">
+    <list key="Workday_Server_Modules_List" value0="com.workday.wtp.ws.cloud.assembly.module:Supplier_Remittance_PDF_collection"/>
+    <list key="modules" value0="Supplier_Remittance_PDF_collection::com.workday.wtp.ws.cloud.assembly.module:Supplier_Remittance_PDF_collection::cc.ws.cloud.assembly::1.0"/>
+  </server>
+</servers>

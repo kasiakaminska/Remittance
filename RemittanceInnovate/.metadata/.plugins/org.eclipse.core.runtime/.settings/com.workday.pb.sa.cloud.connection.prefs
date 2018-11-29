@@ -1,0 +1,13 @@
+Implementation/group=false
+Implementation/image=icons/obj16/conn_blue.png
+Implementation/tenant=innovateuk5
+Implementation/url=https\://wd3-e2-impl.workday.com/ccx
+Production/group=false
+Production/image=icons/obj16/conn_green.png
+Production/url=https\://e2-enterprise-services1.myworkday.com/ccx
+Sandbox/default=true
+Sandbox/group=false
+Sandbox/image=icons/obj16/conn_yellow.png
+Sandbox/tenant=innovateuk
+Sandbox/url=https\://wd3-e2-impl.workday.com/ccx
+eclipse.preferences.version=1

@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <wd:Get_Payments_Response xmlns:wd="urn:com.workday/bsvc" wd:version="v29.0">
+            <wd:Request_Criteria>
+                <wd:Remittance_File_Criteria>
+                    <wd:Remittance_File_Reference>
+                        <wd:ID wd:type="WID">26a12dafd6720150efa23ada5f622952</wd:ID>
+                        <wd:ID wd:type="Remittance_File_ID">3310</wd:ID>
+                    </wd:Remittance_File_Reference>
+                </wd:Remittance_File_Criteria>
+            </wd:Request_Criteria>
+            <wd:Response_Group>
+                <wd:Include_Reference>1</wd:Include_Reference>
+                <wd:Include_Originating_Bank_Data>1</wd:Include_Originating_Bank_Data>
+                <wd:Include_Payroll_Remittance_Data>1</wd:Include_Payroll_Remittance_Data>
+                <wd:Include_Payment_Group_Data>1</wd:Include_Payment_Group_Data>
+            </wd:Response_Group>
+            <wd:Response_Results>
+                <wd:Total_Results>1</wd:Total_Results>
+                <wd:Total_Pages>1</wd:Total_Pages>
+                <wd:Page_Results>1</wd:Page_Results>
+                <wd:Page>1</wd:Page>
+            </wd:Response_Results>
+            <wd:Response_Data>
+                <wd:Payment>
+                    <wd:Payment_Reference>
+                        <wd:ID wd:type="WID">26a12dafd67281994df48dcaca61be09</wd:ID>
+                        <wd:ID wd:type="EFT_Payment_ID">004635</wd:ID>
+                    </wd:Payment_Reference>
+                    <wd:Payment_Data>
+                        <wd:Payment_Group_Data>
+                            <wd:Payment_Group_Reference>
+                                <wd:ID wd:type="WID">26a12dafd67201b4a02befa55f62d651</wd:ID>
+                            </wd:Payment_Group_Reference>
+                            <wd:Payment_Date>2018-10-03-07:00</wd:Payment_Date>
+                            <wd:Currency_Reference>
+                                <wd:ID wd:type="WID">84c7000ecd1d4834a9bfa55ab2dad129</wd:ID>
+                                <wd:ID wd:type="Currency_ID">GBP</wd:ID>
+                                <wd:ID wd:type="Currency_Numeric_Code">826</wd:ID>
+                            </wd:Currency_Reference>
+                            <wd:Payment_Type_Reference>
+                                <wd:ID wd:type="WID">ffe42836a4cf01cc66e1515f6e567b2e</wd:ID>
+                                <wd:ID wd:type="Payment_Type_ID">Payment_Type_BACS</wd:ID>
+                            </wd:Payment_Type_Reference>
+                            <wd:Payment_Method_Reference>
+                                <wd:ID wd:type="WID">d53f47a98fca43edbdf3390dbc9b1c2f</wd:ID>
+                                <wd:ID wd:type="Payment_Method_ID">3</wd:ID>
+                            </wd:Payment_Method_Reference>
+                            <wd:Payment_Category_Reference>
+                                <wd:ID wd:type="WID">dc0eb592446c11de98360015c5e6daf6</wd:ID>
+                                <wd:ID wd:type="Payment_Category_ID">SUPPLIER</wd:ID>
+                            </wd:Payment_Category_Reference>
+                        </wd:Payment_Group_Data>
+                        <wd:Settlement_Run_Reference>
+                            <wd:ID wd:type="WID">db61c10e6388019531cb2634d2497201</wd:ID>
+                        </wd:Settlement_Run_Reference>
+                        <wd:Payment_Status>Complete</wd:Payment_Status>
+                        <wd:Payment_Reference_Number>004635</wd:Payment_Reference_Number>
+                        <wd:Payment_Amount>42879.84</wd:Payment_Amount>
+                        <wd:Amount_as_Text>Forty Two Thousand Eight Hundred Seventy Nine and 84/100</wd:Amount_as_Text>
+                        <wd:Discount_Taken>0</wd:Discount_Taken>
+                        <wd:Currency_Reference>
+                            <wd:ID wd:type="WID">84c7000ecd1d4834a9bfa55ab2dad129</wd:ID>
+                            <wd:ID wd:type="Currency_ID">GBP</wd:ID>
+                            <wd:ID wd:type="Currency_Numeric_Code">826</wd:ID>
+                        </wd:Currency_Reference>
+                        <wd:Currency_Symbol>£</wd:Currency_Symbol>
+                        <wd:Currency_Description>Pound Sterling</wd:Currency_Description>
+                        <wd:Check_or_Advice_Number>0</wd:Check_or_Advice_Number>
+                        <wd:Prenote_Flag>0</wd:Prenote_Flag>
+                        <wd:Payroll_Payment_Display_Order>0</wd:Payroll_Payment_Display_Order>
+                        <wd:Company_Reference>
+                            <wd:ID wd:type="WID">7d2949a1efbf01c95bb187ab4954e545</wd:ID>
+                            <wd:ID wd:type="Organization_Reference_ID">CO_001</wd:ID>
+                            <wd:ID wd:type="Company_Reference_ID">CO_001</wd:ID>
+                        </wd:Company_Reference>
+                        <wd:Originating_Contact_Data>
+                            <wd:Organization_Name>Innovate UK</wd:Organization_Name>
+                            <wd:Transaction_Tax_ID>GB618367325/400</wd:Transaction_Tax_ID>
+                            <wd:Address_Information_Data
+                                wd:Effective_Date="1900-01-01-08:00"
+                                wd:Address_Format_Type="Basic"
+                                wd:Formatted_Address="Polaris House&amp;#xa;North Star Avenue&amp;#xa;Swindon&amp;#xa;Wiltshire&amp;#xa;SN2 1FL&amp;#xa;United Kingdom"
+                                wd:Defaulted_Business_Site_Address="1">
+                                <wd:Country_Reference>
+                                    <wd:ID wd:type="WID">29247e57dbaf46fb855b224e03170bc7</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">GB</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">GBR</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">826</wd:ID>
+                                </wd:Country_Reference>
+                                <wd:Last_Modified>2018-08-16T08:55:19.724-07:00</wd:Last_Modified>
+                                <wd:Address_Line_Data wd:Type="ADDRESS_LINE_1" wd:Descriptor="Address Line 1">Polaris House</wd:Address_Line_Data>
+                                <wd:Address_Line_Data wd:Type="ADDRESS_LINE_2" wd:Descriptor="Address Line 2">North Star Avenue</wd:Address_Line_Data>
+                                <wd:Municipality>Swindon</wd:Municipality>
+                                <wd:Country_Region_Reference>
+                                    <wd:ID wd:type="WID">7ecbd8db72ac44718c27711dc0156c0b</wd:ID>
+                                    <wd:ID wd:type="Country_Region_ID">GBR-WIL</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-2_Code">WIL</wd:ID>
+                                </wd:Country_Region_Reference>
+                                <wd:Country_Region_Descriptor>Wiltshire</wd:Country_Region_Descriptor>
+                                <wd:Postal_Code>SN2 1FL</wd:Postal_Code>
+                                <wd:Usage_Data wd:Public="1">
+                                    <wd:Type_Data wd:Primary="1">
+                                        <wd:Type_Reference>
+                                            <wd:ID wd:type="WID">1f27f250dfaa4724ab1e1617174281e4</wd:ID>
+                                            <wd:ID wd:type="Communication_Usage_Type_ID">WORK</wd:ID>
+                                        </wd:Type_Reference>
+                                    </wd:Type_Data>
+                                </wd:Usage_Data>
+                                <wd:Number_of_Days>0</wd:Number_of_Days>
+                                <wd:Address_Reference>
+                                    <wd:ID wd:type="WID">9794e041e9a8018628aa0e67c0618410</wd:ID>
+                                    <wd:ID wd:type="Address_ID">ADDRESS_REFERENCE-6-1223</wd:ID>
+                                </wd:Address_Reference>
+                                <wd:Address_ID>ADDRESS_REFERENCE-6-1223</wd:Address_ID>
+                            </wd:Address_Information_Data>
+                        </wd:Originating_Contact_Data>
+                        <wd:Originating_Bank_Data>
+                            <wd:Bank_Account_Reference>
+                                <wd:ID wd:type="WID">93530f861f6d0134b1b1d501775d1014</wd:ID>
+                                <wd:ID wd:type="Bank_Account_ID">BA_001</wd:ID>
+                            </wd:Bank_Account_Reference>
+                            <wd:Account_Number>10010831</wd:Account_Number>
+                            <wd:Financial_Institution_Reference>
+                                <wd:ID wd:type="WID">93530f861f6d015b3d4942234e5c520c</wd:ID>
+                                <wd:ID wd:type="Financial_Institution_Reference_ID">RBOS</wd:ID>
+                            </wd:Financial_Institution_Reference>
+                            <wd:Routing_Transit_Number>60-70-80</wd:Routing_Transit_Number>
+                            <wd:Country_Reference>
+                                <wd:ID wd:type="WID">29247e57dbaf46fb855b224e03170bc7</wd:ID>
+                                <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">GB</wd:ID>
+                                <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">GBR</wd:ID>
+                                <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">826</wd:ID>
+                            </wd:Country_Reference>
+                            <wd:Currency_Reference>
+                                <wd:ID wd:type="WID">84c7000ecd1d4834a9bfa55ab2dad129</wd:ID>
+                                <wd:ID wd:type="Currency_ID">GBP</wd:ID>
+                                <wd:ID wd:type="Currency_Numeric_Code">826</wd:ID>
+                            </wd:Currency_Reference>
+                            <wd:Bank_Address_Data
+                                wd:Effective_Date="2017-11-13-08:00"
+                                wd:Address_Format_Type="Basic"
+                                wd:Formatted_Address="Government Banking CST&amp;#xa;2nd Floor, 280 Bishopsgate&amp;#xa;London&amp;#xa;EC2M 4RB&amp;#xa;United Kingdom"
+                                wd:Defaulted_Business_Site_Address="0">
+                                <wd:Country_Reference>
+                                    <wd:ID wd:type="WID">29247e57dbaf46fb855b224e03170bc7</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">GB</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">GBR</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">826</wd:ID>
+                                </wd:Country_Reference>
+                                <wd:Last_Modified>2018-07-09T07:54:23.550-07:00</wd:Last_Modified>
+                                <wd:Address_Line_Data wd:Type="ADDRESS_LINE_1" wd:Descriptor="Address Line 1">Government Banking CST</wd:Address_Line_Data>
+                                <wd:Address_Line_Data wd:Type="ADDRESS_LINE_2" wd:Descriptor="Address Line 2">2nd Floor, 280 Bishopsgate</wd:Address_Line_Data>
+                                <wd:Municipality>London</wd:Municipality>
+                                <wd:Postal_Code>EC2M 4RB</wd:Postal_Code>
+                                <wd:Usage_Data wd:Public="1">
+                                    <wd:Type_Data wd:Primary="1">
+                                        <wd:Type_Reference>
+                                            <wd:ID wd:type="WID">4fae289a7fe541b098ca9448e462ff6b</wd:ID>
+                                            <wd:ID wd:type="Communication_Usage_Type_ID">BUSINESS</wd:ID>
+                                        </wd:Type_Reference>
+                                    </wd:Type_Data>
+                                    <wd:Use_For_Reference>
+                                        <wd:ID wd:type="WID">7a232f5736a840a393b8ab43df7becd5</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_ID">BILLING</wd:ID>
+                                    </wd:Use_For_Reference>
+                                    <wd:Use_For_Reference>
+                                        <wd:ID wd:type="WID">b58a4a54e04c4e1f8fc32bfc3b1a77cf</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_ID">SHIPPING</wd:ID>
+                                    </wd:Use_For_Reference>
+                                    <wd:Use_For_Reference>
+                                        <wd:ID wd:type="WID">8f470e4f6ffd49638c80ea6b5443bddb</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_ID">REMIT</wd:ID>
+                                    </wd:Use_For_Reference>
+                                    <wd:Use_For_Tenanted_Reference>
+                                        <wd:ID wd:type="WID">6c36bbcb19c2012d2a6b0299ab53cb07</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_Tenanted_ID">Shipping</wd:ID>
+                                    </wd:Use_For_Tenanted_Reference>
+                                    <wd:Use_For_Tenanted_Reference>
+                                        <wd:ID wd:type="WID">6c36bbcb19c20174fc41ff98ab53ca07</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_Tenanted_ID">Billing</wd:ID>
+                                    </wd:Use_For_Tenanted_Reference>
+                                    <wd:Use_For_Tenanted_Reference>
+                                        <wd:ID wd:type="WID">6c36bbcb19c2011015b20b99ab53ce07</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_Tenanted_ID">Remit_To</wd:ID>
+                                    </wd:Use_For_Tenanted_Reference>
+                                </wd:Usage_Data>
+                                <wd:Number_of_Days>0</wd:Number_of_Days>
+                                <wd:Address_Reference>
+                                    <wd:ID wd:type="WID">93530f861f6d01b4b3c543234e5c560c</wd:ID>
+                                    <wd:ID wd:type="Address_ID">ADDRESS_REFERENCE-6-1222</wd:ID>
+                                </wd:Address_Reference>
+                                <wd:Address_ID>ADDRESS_REFERENCE-6-1222</wd:Address_ID>
+                            </wd:Bank_Address_Data>
+                        </wd:Originating_Bank_Data>
+                        <wd:Receiving_Party_Reference>
+                            <wd:ID wd:type="WID">319230ff353301ea2470ed854a633376</wd:ID>
+                            <wd:ID wd:type="Supplier_Reference_ID">81007182</wd:ID>
+                            <wd:ID wd:type="Supplier_ID">81007182</wd:ID>
+                        </wd:Receiving_Party_Reference>
+                        <wd:Receiving_Party_Contact_Data>
+                            <wd:Payee_Name>VODAFONE LTD - a/c no ending 9252</wd:Payee_Name>
+                            <wd:Payee_Legal_Name>VODAFONE LTD - a/c no ending 9252</wd:Payee_Legal_Name>
+                            <wd:Payee_Preferred_Name>VODAFONE LTD - a/c no ending 9252</wd:Payee_Preferred_Name>
+                            <wd:Payee_ID>81007182</wd:Payee_ID>
+                            <wd:Email_Address_Data>
+                                <wd:Email_Address>eremitz@vodafone.com</wd:Email_Address>
+                                <wd:Usage_Data wd:Public="1">
+                                    <wd:Type_Reference wd:Primary="1">Business</wd:Type_Reference>
+                                    <wd:Use_For_Reference>Procurement</wd:Use_For_Reference>
+                                </wd:Usage_Data>
+                            </wd:Email_Address_Data>
+                            <wd:Address_Information_Data
+                                wd:Effective_Date="1900-01-01-08:00"
+                                wd:Address_Format_Type="Basic"
+                                wd:Formatted_Address="ATLAS BUS PARK&amp;#xa;WYTHENSHAWE&amp;#xa;MANCHESTER&amp;#xa;M22 5RR&amp;#xa;United Kingdom"
+                                wd:Defaulted_Business_Site_Address="0">
+                                <wd:Country_Reference>
+                                    <wd:ID wd:type="WID">29247e57dbaf46fb855b224e03170bc7</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">GB</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">GBR</wd:ID>
+                                    <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">826</wd:ID>
+                                </wd:Country_Reference>
+                                <wd:Last_Modified>2018-08-01T02:06:54.108-07:00</wd:Last_Modified>
+                                <wd:Address_Line_Data wd:Type="ADDRESS_LINE_1" wd:Descriptor="Address Line 1">ATLAS BUS PARK</wd:Address_Line_Data>
+                                <wd:Address_Line_Data wd:Type="ADDRESS_LINE_2" wd:Descriptor="Address Line 2">WYTHENSHAWE</wd:Address_Line_Data>
+                                <wd:Municipality>MANCHESTER</wd:Municipality>
+                                <wd:Postal_Code>M22 5RR</wd:Postal_Code>
+                                <wd:Usage_Data wd:Public="1">
+                                    <wd:Type_Data wd:Primary="1">
+                                        <wd:Type_Reference>
+                                            <wd:ID wd:type="WID">4fae289a7fe541b098ca9448e462ff6b</wd:ID>
+                                            <wd:ID wd:type="Communication_Usage_Type_ID">BUSINESS</wd:ID>
+                                        </wd:Type_Reference>
+                                    </wd:Type_Data>
+                                    <wd:Use_For_Reference>
+                                        <wd:ID wd:type="WID">7a232f5736a840a393b8ab43df7becd5</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_ID">BILLING</wd:ID>
+                                    </wd:Use_For_Reference>
+                                    <wd:Use_For_Reference>
+                                        <wd:ID wd:type="WID">b58a4a54e04c4e1f8fc32bfc3b1a77cf</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_ID">SHIPPING</wd:ID>
+                                    </wd:Use_For_Reference>
+                                    <wd:Use_For_Reference>
+                                        <wd:ID wd:type="WID">8f470e4f6ffd49638c80ea6b5443bddb</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_ID">REMIT</wd:ID>
+                                    </wd:Use_For_Reference>
+                                    <wd:Use_For_Tenanted_Reference>
+                                        <wd:ID wd:type="WID">6c36bbcb19c2012d2a6b0299ab53cb07</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_Tenanted_ID">Shipping</wd:ID>
+                                    </wd:Use_For_Tenanted_Reference>
+                                    <wd:Use_For_Tenanted_Reference>
+                                        <wd:ID wd:type="WID">6c36bbcb19c20174fc41ff98ab53ca07</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_Tenanted_ID">Billing</wd:ID>
+                                    </wd:Use_For_Tenanted_Reference>
+                                    <wd:Use_For_Tenanted_Reference>
+                                        <wd:ID wd:type="WID">6c36bbcb19c2011015b20b99ab53ce07</wd:ID>
+                                        <wd:ID wd:type="Communication_Usage_Behavior_Tenanted_ID">Remit_To</wd:ID>
+                                    </wd:Use_For_Tenanted_Reference>
+                                </wd:Usage_Data>
+                                <wd:Number_of_Days>0</wd:Number_of_Days>
+                                <wd:Address_Reference>
+                                    <wd:ID wd:type="WID">319230ff353301f8b8c1f5854a633a76</wd:ID>
+                                    <wd:ID wd:type="Address_ID">ADDRESS_REFERENCE-6-2313</wd:ID>
+                                </wd:Address_Reference>
+                                <wd:Address_ID>ADDRESS_REFERENCE-6-2313</wd:Address_ID>
+                            </wd:Address_Information_Data>
+                        </wd:Receiving_Party_Contact_Data>
+                        <wd:Receiving_Party_Bank_Data>
+                            <wd:Account_Number>70649252</wd:Account_Number>
+                            <wd:Masked_Account_Number>******9252</wd:Masked_Account_Number>
+                            <wd:Account_Type>DDA</wd:Account_Type>
+                            <wd:Bank_Name>BARCLAYS</wd:Bank_Name>
+                            <wd:Bank_ID_Number>200000</wd:Bank_ID_Number>
+                            <wd:Branch_Name>LONDON</wd:Branch_Name>
+                            <wd:Country_Reference>
+                                <wd:ID wd:type="WID">29247e57dbaf46fb855b224e03170bc7</wd:ID>
+                                <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">GB</wd:ID>
+                                <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">GBR</wd:ID>
+                                <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">826</wd:ID>
+                            </wd:Country_Reference>
+                            <wd:Bank_Account_Name>VODAFONE LTD FORMALLY CABLE &amp; WIRELESS UK</wd:Bank_Account_Name>
+                        </wd:Receiving_Party_Bank_Data>
+                        <wd:Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6893</wd:Document_ID>
+                                <wd:Document_Reference>IB 037062</wd:Document_Reference>
+                                <wd:Document_Date>2018-09-03-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>2954.41</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>2954.41</wd:Amount_Paid>
+                                <wd:Amount_Due>2954.41</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6895</wd:Document_ID>
+                                <wd:Document_Reference>IB 036775</wd:Document_Reference>
+                                <wd:Document_Date>2018-08-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>3525.07</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>3525.07</wd:Amount_Paid>
+                                <wd:Amount_Due>3525.07</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6978</wd:Document_ID>
+                                <wd:Document_Reference>UK10/092018/8038</wd:Document_Reference>
+                                <wd:Document_Date>2018-09-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>9.98</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>9.98</wd:Amount_Paid>
+                                <wd:Amount_Due>9.98</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6979</wd:Document_ID>
+                                <wd:Document_Reference>UK10/082018/336</wd:Document_Reference>
+                                <wd:Document_Date>2018-08-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>9.98</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>9.98</wd:Amount_Paid>
+                                <wd:Amount_Due>9.98</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6981</wd:Document_ID>
+                                <wd:Document_Reference>UK10/092018/7042</wd:Document_Reference>
+                                <wd:Document_Date>2018-09-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>8237.51</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>8237.51</wd:Amount_Paid>
+                                <wd:Amount_Due>8237.51</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6983</wd:Document_ID>
+                                <wd:Document_Reference>UK10/082018/9975</wd:Document_Reference>
+                                <wd:Document_Date>2018-08-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>8237.51</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>8237.51</wd:Amount_Paid>
+                                <wd:Amount_Due>8237.51</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>6985</wd:Document_ID>
+                                <wd:Document_Reference>UK10/082018/7719</wd:Document_Reference>
+                                <wd:Document_Date>2018-08-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>952.69</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>952.69</wd:Amount_Paid>
+                                <wd:Amount_Due>952.69</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>7004</wd:Document_ID>
+                                <wd:Document_Reference>UK10/092018/5310</wd:Document_Reference>
+                                <wd:Document_Date>2018-09-01-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>952.69</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>952.69</wd:Amount_Paid>
+                                <wd:Amount_Due>952.69</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                            <wd:Document_Remittance_Data>
+                                <wd:Document_Type>Supplier Payment Application</wd:Document_Type>
+                                <wd:Document_ID>7007</wd:Document_ID>
+                                <wd:Document_Reference>UK10/072018/6018</wd:Document_Reference>
+                                <wd:Document_Date>2018-07-23-07:00</wd:Document_Date>
+                                <wd:Total_Payable_Amount>18000</wd:Total_Payable_Amount>
+                                <wd:Amount_Paid>18000</wd:Amount_Paid>
+                                <wd:Amount_Due>18000</wd:Amount_Due>
+                                <wd:Discount_Taken>0</wd:Discount_Taken>
+                                <wd:Tax_Amount>0</wd:Tax_Amount>
+                                <wd:Withheld_Tax_Amount>0</wd:Withheld_Tax_Amount>
+                            </wd:Document_Remittance_Data>
+                        </wd:Remittance_Data>
+                    </wd:Payment_Data>
+                </wd:Payment>
+            </wd:Response_Data>
+        </wd:Get_Payments_Response>
+    </env:Body>
+</env:Envelope>

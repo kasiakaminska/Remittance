@@ -1,0 +1,18 @@
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row["Remittance_Header.Supplier_Address2"] == null
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row["Remittance_Header.Supplier_Address3"] == null
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row["Remittance_Header.Company_Address2"] == null
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row["Remittance_Header.Company_Address3"] == null
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row._outer["Remittance_Header.Payment_Category"] == "AD_HOC"
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row._outer["Remittance_Header.Payment_Category"] != "SUPPLIER"
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row._outer["Remittance_Header.Payment_Category"] != "AD_HOC"
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row._outer["Remittance_Header.Payment_Category"] != "AD_HOC"
+Oct 16, 2018 2:07:37 PM org.eclipse.birt.report.engine.executor.ReportItemExecutor evaluateBoolean
+WARNING: Invalid boolean expression:row._outer["Remittance_Header.Payment_Category"] != "SUPPLIER"

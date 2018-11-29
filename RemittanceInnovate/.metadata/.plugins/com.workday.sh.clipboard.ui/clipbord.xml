@@ -1,0 +1,56 @@
+<?xml version="1.0" ?><clipboard>
+<entry kind="COPY" timestamp="1540906404385" md5="f52ae7bb00da71363449a7224169d868" pine="false"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope
+    xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <env:Body>
+        <wd:Get_Supplier_Invoices_Request
+            xmlns:wd="urn:com.workday/bsvc"
+            wd:version="v30.2">
+            <wd:Request_References>
+                <wd:Supplier_Invoice_Reference>
+                    <wd:ID wd:type="Supplier_Invoice_Reference_ID">abcdef</wd:ID>
+                </wd:Supplier_Invoice_Reference>
+            </wd:Request_References>
+            <wd:Response_Filter>
+                <wd:As_Of_Effective_Date>2018-10-30</wd:As_Of_Effective_Date>
+                <wd:As_Of_Entry_DateTime>2018-10-30T14:33:24</wd:As_Of_Entry_DateTime>
+                <wd:Page>1</wd:Page>
+                <wd:Count>100</wd:Count>
+            </wd:Response_Filter>
+            <wd:Response_Group>
+                <wd:Include_Reference>true</wd:Include_Reference>
+                <wd:Include_Attachment_Data>true</wd:Include_Attachment_Data>
+            </wd:Response_Group>
+        </wd:Get_Supplier_Invoices_Request>
+    </env:Body>
+</env:Envelope>]]></entry>
+<entry kind="COPY" timestamp="1540906276780" md5="ba4eeca5cebf0e068ded2087b862213b" pine="false"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope
+    xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <env:Body>
+        <wd:Get_Supplier_Invoices_Request
+            xmlns:wd="urn:com.workday/bsvc"
+            wd:version="v30.2">
+            <wd:Request_References>
+                <wd:Supplier_Invoice_Reference>
+                    <wd:ID wd:type="Supplier_Invoice_Reference_ID">abcdef</wd:ID>
+                </wd:Supplier_Invoice_Reference>
+            </wd:Request_References>
+            <wd:Response_Filter>
+                <wd:As_Of_Effective_Date>2018-10-30</wd:As_Of_Effective_Date>
+                <wd:As_Of_Entry_DateTime>2018-10-30T14:31:16</wd:As_Of_Entry_DateTime>
+                <wd:Page>1</wd:Page>
+                <wd:Count>100</wd:Count>
+            </wd:Response_Filter>
+            <wd:Response_Group>
+                <wd:Include_Reference>true</wd:Include_Reference>
+                <wd:Include_Attachment_Data>true</wd:Include_Attachment_Data>
+            </wd:Response_Group>
+        </wd:Get_Supplier_Invoices_Request>
+    </env:Body>
+</env:Envelope>]]></entry>
+<entry kind="COPY" timestamp="1540901368056" md5="77566047a83c68f9a863ff9a753c52cd" pine="false"><![CDATA[/wd:Get_Payments_Request/wd:Response_Group/wd:Include_Payroll_Result_Country_Data]]></entry>
+<entry kind="COPY" timestamp="1539595358647" md5="b24d19ca0b211263c03dc4f64351c9b7" pine="false"><![CDATA[/wd:Get_Payments_Request/wd:Response_Group/wd:Include_Payroll_Remittance_Data]]></entry>
+</clipboard>

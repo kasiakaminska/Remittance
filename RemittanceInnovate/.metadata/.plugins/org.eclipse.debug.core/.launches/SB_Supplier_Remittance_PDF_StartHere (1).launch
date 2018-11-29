@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.workday.cloud.integration.launch.launchConfigurationType">
+<stringAttribute key="com.workday.cloud.collection.name" value="Supplier_Remittance_PDF_collection"/>
+<stringAttribute key="com.workday.cloud.environment" value="Sandbox"/>
+<mapAttribute key="com.workday.cloud.launch.param.crfdefaults"/>
+<mapAttribute key="com.workday.cloud.launch.param.modes">
+<mapEntry key="File Reference GL" value="literal"/>
+</mapAttribute>
+<listAttribute key="com.workday.cloud.launch.param.optionsFile Reference GL"/>
+<mapAttribute key="com.workday.cloud.launch.param.singularity"/>
+<mapAttribute key="com.workday.cloud.launch.param.types">
+<mapEntry key="File Reference GL" value="number"/>
+</mapAttribute>
+<mapAttribute key="com.workday.cloud.launch.params">
+<mapEntry key="File Reference GL" value=""/>
+</mapAttribute>
+<stringAttribute key="com.workday.cloud.project" value="Supplier_Remittance_PDF"/>
+<stringAttribute key="com.workday.cloud.workday.in.id" value="StartHere"/>
+</launchConfiguration>
