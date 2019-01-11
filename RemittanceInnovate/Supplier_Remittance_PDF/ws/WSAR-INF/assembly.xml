@@ -32,7 +32,7 @@
         </cloud:sequence-generator-service>
         <cloud:report-service name="CR Supplier Invoice - Info2">
           <cloud:report-alias description="CR Supplier Invoice - Info" name="SupInfo ">
-            <cloud:report-reference description="CR Supplier Invoice - Info" type="WID">2f93a1de7e9401e15266eebbb018bd27</cloud:report-reference>
+            <cloud:report-reference description="CR Supplier Invoice - Info" type="WID">83d023125cf801749ae291b75f273214</cloud:report-reference>
           </cloud:report-alias>
         </cloud:report-service>
         <cloud:service-reference name="WPN - Remittance Service"/>
@@ -40,11 +40,11 @@
         </cc:workday-in>
         <cc:async-mediation id="InitParms" routes-to="call-getRemitInfo">
             <cc:steps>
-                <cc:eval id="Props"><cc:expression>props['p.error'] = false</cc:expression><cc:expression>props['current.datetime'] = parts[0].xpath(&quot;current-dateTime()&quot;)</cc:expression><cc:expression>props['current.date'] = props['current.datetime'].substring(0,10)</cc:expression><cc:expression>props['lp.remit'] = lp.getSimpleData('WPN - Remittance Service','Remittance File Reference')</cc:expression><cc:expression>props['seqgen.filename'] = 'Filename'</cc:expression>
-                    <cc:expression>props['lp.remit'] = '1855'  // Set this value as needed for Debugging in Studio </cc:expression>
+                <cc:eval id="Props"><cc:expression>props['p.error'] = false</cc:expression><cc:expression>props['current.datetime'] = parts[0].xpath(&quot;current-dateTime()&quot;)</cc:expression><cc:expression>props['current.date'] = props['current.datetime'].substring(0,10)</cc:expression><cc:expression>props['lp.remit'] = lp.getSimpleData('WPN - Remittance Service','Remittance File Reference')</cc:expression><cc:expression>props['seqgen.filename'] = 'No.'</cc:expression>
+                    <cc:expression>//props['lp.remit'] = '1855'  // Set this value as needed for Debugging in Studio </cc:expression>
                     <cc:expression>props['claimSet']= new java.util.HashMap();</cc:expression>
                     <cc:expression>props['descSet']= new java.util.HashMap();</cc:expression>
-                    <cc:expression>props['key'] = 1</cc:expression></cc:eval>
+                    <cc:expression>props['keyHash'] = 1</cc:expression></cc:eval>
                 <cc:eval id="Attribs"><cc:expression>props['ia.document.retention'] = intsys.getAttribute('Document Retention')</cc:expression></cc:eval>
                 <cc:validate-exp id="ValidateExp">
                     <cc:expression failure-message="Remittance File ID not retrieved.">props['lp.remit'] != empty</cc:expression>
@@ -102,21 +102,22 @@
         <cc:local-out id="call-handleError2" store-message="none" endpoint="vm://Supplier_Remittance_PDF/handleError" propagate-abort="true"/>
         <cc:local-out id="PIMInfoMsg" routes-response-to="call-produceRemit" endpoint="vm://wcc/PutIntegrationMessage">
             <cc:set name="is.message.severity" value="'INFO'"/>
-            <cc:set name="is.message.summary" value="'Processing remittance for supplier ' + props['p.supplier.name'] + ' for settlement run number ' + props['p.set.run.num']"/>
+            <cc:set name="is.message.summary" value="'Processing remittance for supplier ' + props['p.supplier.name'] + ' for settlement run number ' + props['p.set.run.num'] + props['test']"/>
         </cc:local-out>
         <cc:local-out id="call-produceRemit" store-message="none" endpoint="vm://Supplier_Remittance_PDF/produceRemit" propagate-abort="true"/>
         <cc:local-in id="getRemitInfo" routes-to="writePymntMsg"/>
         <cc:async-mediation id="RemitInfo" routes-to="PIMInfoMsg">
             <cc:steps>
                 <cc:copy id="Copy" output="variable" output-variable="varPayMsg"/>
-                <cc:eval id="Eval"><cc:expression>props['p.company.prompt'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Company_Reference/wd:ID[@wd:type = 'WID']&quot;)</cc:expression><cc:expression>props['p.supplier.name'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Contact_Data/wd:Payee_Name&quot;)</cc:expression><cc:expression>props['p.supplier.ref.id'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Reference/wd:ID[@wd:type='Supplier_ID']&quot;)</cc:expression><cc:expression>props['p.set.run.num'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Settlement_Run_Reference/@wd:Descriptor&quot;)</cc:expression><cc:expression>props['p.total.invoices'] = parts[0].xpath('count(wd:Payment/wd:Payment_Data/wd:Remittance_Data/wd:Document_Remittance_Data)')</cc:expression><cc:expression>props['p.company.refid'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Company_Reference/wd:ID[@wd:type = 'Company_Reference_ID']&quot;)</cc:expression><cc:expression>props['p.payment.category'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Payment_Group_Data/wd:Payment_Category_Reference/wd:ID[@wd:type = 'Payment_Category_ID']&quot;)</cc:expression><cc:expression>props['p.error'] = false</cc:expression>
+                <cc:eval id="Eval"><cc:expression>props['p.company.prompt'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Company_Reference/wd:ID[@wd:type = 'WID']&quot;)</cc:expression><cc:expression>props['p.supplier.name'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Contact_Data/wd:Payee_Name&quot;)</cc:expression><cc:expression>props['p.supplier.ref.id'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Reference/wd:ID[@wd:type='Supplier_ID']&quot;)</cc:expression><cc:expression>props['p.set.run.num'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Settlement_Run_Reference/wd:ID[@wd:type='WID']&quot;)</cc:expression><cc:expression>props['p.total.invoices'] = parts[0].xpath('count(wd:Payment/wd:Payment_Data/wd:Remittance_Data/wd:Document_Remittance_Data)')</cc:expression><cc:expression>props['p.company.refid'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Company_Reference/wd:ID[@wd:type = 'Company_Reference_ID']&quot;)</cc:expression><cc:expression>props['p.payment.category'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Payment_Group_Data/wd:Payment_Category_Reference/wd:ID[@wd:type = 'Payment_Category_ID']&quot;)</cc:expression><cc:expression>props['p.error'] = false</cc:expression>
                     <cc:expression>props['p.masked.account'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Bank_Data/wd:Masked_Account_Number&quot;)</cc:expression>
                     <cc:expression>props['p.bank.account.name'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Bank_Data/wd:Bank_Account_Name&quot;)</cc:expression>
                     <cc:expression>props['p.bank.sort.code'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Bank_Data/wd:Bank_ID_Number&quot;)</cc:expression>
                     <cc:expression>props['p.supplier.id'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Reference/wd:ID[@wd:type = 'Supplier_ID']&quot;)</cc:expression>
                     <cc:expression>props['p.inv.ref'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Remittance_Data/wd:Document_Remittance_Data/wd:Document_Reference&quot;)</cc:expression>
                     <cc:expression>props['p.sup.email'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Receiving_Party_Contact_Data/wd:Email_Address_Data/wd:Email_Address&quot;)</cc:expression>
-                    <cc:expression>props['p.transaction.ref'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Reference/wd:ID[@wd:type = 'EFT_Payment_ID']&quot;)</cc:expression></cc:eval>
+                    <cc:expression>props['p.transaction.ref'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Reference/wd:ID[@wd:type = 'EFT_Payment_ID']&quot;)</cc:expression>
+                    <cc:expression>props['test'] = parts[0].xpath(&quot;wd:Payment/wd:Payment_Data/wd:Remittance_Data/wd:Document_Remittance_Data/wd:Document_ID&quot;)</cc:expression></cc:eval>
                 <cc:validate-exp id="ValidateExp">
                     <cc:expression failure-message="'Could not retrieve Company information'">props['p.company.refid'] != empty</cc:expression>
                     <cc:expression failure-message="'Could not retrieve Supplier.'">props['p.supplier.ref.id'] != empty</cc:expression>
@@ -241,11 +242,12 @@
                     <cc:expression>props['p.invoice.desc'] = parts[0].xpath('wd:Report_Entry/wd:Supplier_Invoice_Lines_group/wd:Line_Item_Description', 'wd urn:com.workday.report/CR_Supplier_Invoice_-_Info')</cc:expression>
                     <cc:expression>props['p.claim.num'] = parts[0].xpath('wd:Report_Entry/wd:EMI_SUP_Invoices_group/wd:Claim_Number', 'wd urn:com.workday.report/CR_Supplier_Invoice_-_Info')</cc:expression>
                     <cc:expression>props['p.sup.cat'] = parts[0].xpath('wd:Report_Entry/wd:Supplier_Category', 'wd urn:com.workday.report/CR_Supplier_Invoice_-_Info')</cc:expression>
-                    <cc:expression>props['keyHash'] = parts[0].xpath('wd:Report_Entry/wd:CF_EMI_Invoice_Payment_group/wd:instanceID', 'wd urn:com.workday.report/CR_Supplier_Invoice_-_Info')</cc:expression>
-                    <cc:expression>props['delimiter'] = props['keyHash'].toString().indexOf('$')</cc:expression>
-                    <cc:expression>props['keyHash3'] = props['keyHash'].toString().substring(props['delimiter']+1)</cc:expression>
-                    <cc:expression>props['claimSet'].put(props['keyHash3'].toString(), props['p.claim.num'].toString())</cc:expression>
-                    <cc:expression>props['descSet'].put(props['keyHash3'].toString(), props['p.invoice.desc'])</cc:expression>
+                    <cc:expression>//props['keyHash'] = parts[0].xpath('wd:Report_Entry/wd:CF_EMI_Invoice_Payment_group/wd:instanceID', 'wd urn:com.workday.report/CR_Supplier_Invoice_-_Info')</cc:expression>
+                    <cc:expression>//props['delimiter'] = props['keyHash'].toString().indexOf('$')</cc:expression>
+                    <cc:expression>//props['keyHash3'] = props['keyHash'].toString().substring(props['delimiter']+1)</cc:expression>
+                    <cc:expression>props['claimSet'].put(props['keyHash'].toString(), props['p.claim.num'].toString())</cc:expression>
+                    <cc:expression>props['descSet'].put(props['keyHash'].toString(), props['p.invoice.desc'])</cc:expression>
+                    <cc:expression>props['keyHash'] = props['keyHash'] + 1</cc:expression>
                 </cc:eval></cc:steps>
             <cc:send-error id="SendError" routes-to="call_handleError3"/>
         </cc:async-mediation>

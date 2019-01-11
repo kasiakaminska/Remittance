@@ -2764,6 +2764,7 @@
                                     <property name="borderTopStyle">none</property>
                                     <data id="307">
                                         <property name="fontSize">10pt</property>
+                                        <property name="textAlign">left</property>
                                         <list-property name="visibility">
                                             <structure>
                                                 <property name="format">all</property>

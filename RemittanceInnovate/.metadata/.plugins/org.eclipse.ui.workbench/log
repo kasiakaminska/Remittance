@@ -6501,3 +6501,1562 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:347)
 	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
 	... 64 more
+
+!ENTRY com.workday.sh.sa.update 4 0 2018-11-28 11:46:24.346
+!MESSAGE Connection reset
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:704)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:675)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at java.net.URL.openStream(URL.java:1045)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.readVersion(CheckForStudioUpdates.scala:80)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.checkForStudioUpdates(CheckForStudioUpdates.scala:48)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates$$anon$1.run(CheckForStudioUpdates.scala:31)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.workday.assembly.debug.core 1 0 2018-11-28 12:24:54.732
+!MESSAGE Loading slave from C:\Users\katarzynak\AppData\Local\WD\studio\plugins\com.workday.wtp.cloud.runtime.a_2018.36.2020\conf
+
+!ENTRY com.capeclear.wtp.assembly.debug 1 0 2018-11-28 12:24:54.917
+!MESSAGE Debug checker thread started
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:55.926
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:56456/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:55.932
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:56456/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:56.942
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:56456/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:56.949
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:56456/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:58.965
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:56456/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:58.969
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:56456/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:59.973
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:56456/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:24:59.980
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:56456/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:01.999
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:56456/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:02.005
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:56456/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:03.022
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:56456/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:03.026
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:56456/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:03.031
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect, first attempt (UTC): 2018-11-28T11:24:54.918Z, first attempt (CET): 2018-11-28T12:24:54.918+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 8104, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:03.036
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:56456/cloud-slave/debug/connect - Connection refused: connect, first attempt (UTC): 2018-11-28T11:24:54.918Z, first attempt (CET): 2018-11-28T12:24:54.918+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 8104, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=3e085277-5614-4d1e-2f0e-276907174764)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:04.343
+!MESSAGE WARN Worker-39 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because exception does not qualify: BadRequestException : 
+Error code : notfound
+Response :No such request=c5e001dae52701f4b47fcc281f1b7119
+
+com.capeclear.capeconnect.transport.BadRequestException: error from returned HTTP status: 404 Not Found URL=http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true, first attempt (UTC): 2018-11-28T11:25:04.338Z, first attempt (CET): 2018-11-28T12:25:04.338+01:00, responseTimeout: 300000, retryDelay: 1000 (esbHttpRequestId=50000555-5d1d-4f3d-2966-6e25126b0a40)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:25:04.343
+!MESSAGE WARN Worker-39 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because exception does not qualify: BadRequestException : 
+Error code : notfound
+Response :No such request=c5e001dae52701f4b47fcc281f1b7119
+
+com.capeclear.capeconnect.transport.BadRequestException: error from returned HTTP status: 404 Not Found URL=http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true, first attempt (UTC): 2018-11-28T11:25:04.338Z, first attempt (CET): 2018-11-28T12:25:04.338+01:00, responseTimeout: 300000, retryDelay: 1000 (esbHttpRequestId=50000555-5d1d-4f3d-2966-6e25126b0a40)
+
+
+!ENTRY com.workday.assembly.debug.core 2 0 2018-11-28 12:25:04.346
+!MESSAGE Unable to retrieve debug process state: error from returned HTTP status: 404 Not Found URL=http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true
+!STACK 0
+BadRequestException : 
+Error code : notfound
+Response :No such request=c5e001dae52701f4b47fcc281f1b7119
+
+com.capeclear.capeconnect.transport.BadRequestException: error from returned HTTP status: 404 Not Found URL=http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true
+	at com.capeclear.capeconnect.transport.http.client.AbstractHttpClient.doCheckStatus(AbstractHttpClient.java:95)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.checkStatus(HttpURLConnectionWrapper.java:255)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:348)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1371)
+	at com.workday.mediation.slave.client.SlaveClient.doSendMessage(SlaveClient.java:716)
+	at com.workday.mediation.slave.client.SlaveClient.sendMessage(SlaveClient.java:708)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:907)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:868)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:861)
+	at com.workday.cloud.api.client.internal.SlaveClientFacadeImpl.getRequestAsMessage(SlaveClientFacadeImpl.java:81)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getRequestAsMessage(RemoteProcessStateProviderImpl.java:252)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getProcessStatus(RemoteProcessStateProviderImpl.java:98)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:62)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:56)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.check(DebugProcessMonitor.java:218)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.access$1(DebugProcessMonitor.java:212)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor$Checker.run(DebugProcessMonitor.java:80)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor$1.run(DebugProcessMonitor.java:202)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.capeclear.wtp.assembly.debug 1 0 2018-11-28 12:27:28.083
+!MESSAGE Debug checker thread: stop requested
+
+!ENTRY com.capeclear.wtp.assembly.debug 1 0 2018-11-28 12:27:28.143
+!MESSAGE Debug checker thread exited, checkForEvents=false
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:29.157
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:29.160
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:31.176
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:31.180
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:33.196
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:33.200
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:33.205
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: java.net.ConnectException: Connection refused: connect, first attempt (UTC): 2018-11-28T11:27:28.131Z, first attempt (CET): 2018-11-28T12:27:28.131+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 5065, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-28 12:27:33.209
+!MESSAGE WARN Worker-41 HttpTransport endpoint= http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: java.net.ConnectException: Connection refused: connect, first attempt (UTC): 2018-11-28T11:27:28.131Z, first attempt (CET): 2018-11-28T12:27:28.131+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 5065, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+
+
+!ENTRY com.workday.assembly.debug.core 2 0 2018-11-28 12:27:33.210
+!MESSAGE Unable to retrieve debug process state: Http Out transport id=CT-h1 encountered error sending to endpoint http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true
+!STACK 0
+com.capeclear.mediation.MediationException: Http Out transport id=CT-h1 encountered error sending to endpoint http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:478)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1371)
+	at com.workday.mediation.slave.client.SlaveClient.doSendMessage(SlaveClient.java:716)
+	at com.workday.mediation.slave.client.SlaveClient.sendMessage(SlaveClient.java:708)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:907)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:868)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:861)
+	at com.workday.cloud.api.client.internal.SlaveClientFacadeImpl.getRequestAsMessage(SlaveClientFacadeImpl.java:81)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getRequestAsMessage(RemoteProcessStateProviderImpl.java:252)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getProcessStatus(RemoteProcessStateProviderImpl.java:98)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:62)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:56)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.notifyForProcess(DebugProcessMonitor.java:377)
+	at com.workday.assembly.debug.core.launch.Cleaner.onCleanup(Cleaner.java:38)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.onCleanup(AssemblyDebugTarget.java:287)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.terminate(AssemblyDebugTarget.java:1104)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyStackFrame.terminate(AssemblyStackFrame.java:296)
+	at org.eclipse.debug.internal.core.commands.TerminateCommand.execute(TerminateCommand.java:32)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:32)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:225)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.capeclear.capeconnect.transport.TransportException: An I/O error occurred sending to http://localhost:56456/cloud-slave/requests/c5e001dae52701f4b47fcc281f1b7119?includeAuditLogs=true&includeESBLog=true: Connection refused: connect (esbHttpRequestId=14036002-1c23-4464-211a-5f35444b3a31)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:157)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	... 31 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.setResponseStatus(HttpURLConnectionWrapper.java:289)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:347)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	... 34 more
+
+!ENTRY com.workday.sh.sa.update 4 0 2018-11-28 12:46:49.888
+!MESSAGE Connection reset
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:704)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:675)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:338)
+	at com.workday.sh.sa.core.HttpUrlRedirect$.checkForRedirect(HttpUrlRedirect.scala:16)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.readVersion(CheckForStudioUpdates.scala:80)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.checkForStudioUpdates(CheckForStudioUpdates.scala:48)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates$$anon$1.run(CheckForStudioUpdates.scala:31)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.workday.pb.sa.update 4 0 2018-11-28 14:17:44.457
+!MESSAGE Connection reset
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:704)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:675)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:338)
+	at com.workday.sh.sa.core.HttpUrlRedirect$.checkForRedirect(HttpUrlRedirect.scala:16)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.readVersion(CheckForStudioUpdates.scala:80)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.checkForStudioUpdates(CheckForStudioUpdates.scala:48)
+	at com.workday.sh.sa.update.UpdateFragment$.modalCheckForUpdates(UpdateFragment.scala:48)
+	at com.workday.pb.sa.update.KeepUpdated$$anonfun$begin$1.apply$mcV$sp(KeepBfpUpdated.scala:15)
+	at com.workday.pb.sa.update.KeepUpdated$$anon$2.run(KeepBfpUpdated.scala:39)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.capeclear.wtp.assembly.debug 4 0 2018-11-28 15:58:46.972
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in com.capeclear.wtp.assembly.debug.Activator.stop() of bundle com.capeclear.wtp.assembly.debug.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:855)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1675)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1594)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:47)
+	at org.eclipse.core.runtime.Status.setPlugin(Status.java:219)
+	at org.eclipse.core.runtime.Status.<init>(Status.java:87)
+	at com.workday.common.logger.LoggerBase.log(LoggerBase.java:130)
+	at com.workday.assembly.debug.core.launch.Cleaner.onCleanup(Cleaner.java:49)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.onCleanup(AssemblyDebugTarget.java:287)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.shutdown(AssemblyDebugTarget.java:293)
+	at com.capeclear.wtp.assembly.debug.Activator.stop(Activator.java:48)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	... 13 more
+Root exception:
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:47)
+	at org.eclipse.core.runtime.Status.setPlugin(Status.java:219)
+	at org.eclipse.core.runtime.Status.<init>(Status.java:87)
+	at com.workday.common.logger.LoggerBase.log(LoggerBase.java:130)
+	at com.workday.assembly.debug.core.launch.Cleaner.onCleanup(Cleaner.java:49)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.onCleanup(AssemblyDebugTarget.java:287)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.shutdown(AssemblyDebugTarget.java:293)
+	at com.capeclear.wtp.assembly.debug.Activator.stop(Activator.java:48)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1675)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1594)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:745)
+!SESSION 2018-11-30 11:50:37.188 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY cc-log4j 2 30000 2018-11-30 11:50:49.430
+!MESSAGE WARN main com.workday.features.FeatureFlags - Could not find default features properties file on the classpath: features.properties
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 11:50:49.440
+!MESSAGE WARN main com.workday.features.FeatureFlags - Could not find default features properties file on the classpath: features.properties
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 11:50:49.450
+!MESSAGE WARN main com.workday.features.FeatureFlags - wd.home not set, attempting alterate resolution of features.properties
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 11:50:49.450
+!MESSAGE WARN main com.workday.features.FeatureFlags - wd.home not set, attempting alterate resolution of features.properties
+
+
+!ENTRY com.capeclear.wtp 2 6549 2018-11-30 11:50:56.658
+!MESSAGE Bundle 'com.capeclear.wtp.ws.java' is not installed on OSGi platform.
+
+!ENTRY com.capeclear.wtp 2 6549 2018-11-30 11:50:56.658
+!MESSAGE Bundle 'com.capeclear.wtp.ws.mediation' is not installed on OSGi platform.
+
+!ENTRY com.capeclear.wtp 2 6549 2018-11-30 11:50:56.658
+!MESSAGE Bundle 'com.capeclear.wtp.ws.xform' is not installed on OSGi platform.
+
+!ENTRY com.capeclear.wtp 2 6549 2018-11-30 11:50:56.658
+!MESSAGE Bundle 'com.capeclear.wtp.bpel20.facet' is not installed on OSGi platform.
+
+!ENTRY com.capeclear.wtp 2 6549 2018-11-30 11:50:56.658
+!MESSAGE Bundle 'com.capeclear.wtp.ws.bpel' is not installed on OSGi platform.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-30 11:51:00.127
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\katarzynak'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.workday.pb.sa.runtime.update.core 0 1 2018-11-30 11:51:13.539
+!MESSAGE No updates available.
+
+!ENTRY com.workday.pb.sa.update 4 0 2018-11-30 11:52:26.625
+!MESSAGE Connection reset
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:704)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:675)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at java.net.URL.openStream(URL.java:1045)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.readVersion(CheckForStudioUpdates.scala:80)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.checkForStudioUpdates(CheckForStudioUpdates.scala:48)
+	at com.workday.sh.sa.update.UpdateFragment$.modalCheckForUpdates(UpdateFragment.scala:48)
+	at com.workday.pb.sa.update.KeepUpdated$$anonfun$begin$1.apply$mcV$sp(KeepBfpUpdated.scala:15)
+	at com.workday.pb.sa.update.KeepUpdated$$anon$2.run(KeepBfpUpdated.scala:39)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:18:45.649
+!MESSAGE WARN pool-1-thread-2 com.capeclear.management.agent.NullAgentImpl - there is no correctly configured monitoring agent available, cannot register managed component type com.capeclear.mediation.impl.MediationStatistics with name client-ba, this component will not be monitorable. Further attempts to register components will be ignored
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:18:45.655
+!MESSAGE WARN pool-1-thread-2 com.capeclear.management.agent.NullAgentImpl - there is no correctly configured monitoring agent available, cannot register managed component type com.capeclear.mediation.impl.MediationStatistics with name client-ba, this component will not be monitorable. Further attempts to register components will be ignored
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:18:46.479
+!MESSAGE WARN pool-1-thread-2 HttpTransport endpoint= https://wd3-e2-impl.workday.com/ccx/cc-cloud-master/tenant-confidence-level com.workday.esb.config.PropertyBootstrapper - wd.home not set! Cannot load default properties file.
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:18:46.479
+!MESSAGE WARN pool-1-thread-2 HttpTransport endpoint= https://wd3-e2-impl.workday.com/ccx/cc-cloud-master/tenant-confidence-level com.workday.esb.config.PropertyBootstrapper - wd.home not set! Cannot load default properties file.
+
+
+!ENTRY unknown 0 0 2018-11-30 14:18:48.996
+!MESSAGE OK
+
+!ENTRY unknown 0 0 2018-11-30 14:18:51.465
+!MESSAGE OK
+
+!ENTRY com.workday.assembly.debug.core 1 0 2018-11-30 14:28:36.957
+!MESSAGE Loading slave from C:\Users\katarzynak\AppData\Local\WD\studio\plugins\com.workday.wtp.cloud.runtime.a_2018.36.2020\conf
+
+!ENTRY com.capeclear.wtp.assembly.debug 1 0 2018-11-30 14:28:37.246
+!MESSAGE Debug checker thread started
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:38.306
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:59215/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:38.307
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:59215/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:39.320
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:59215/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:39.325
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:59215/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:41.338
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:59215/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:41.343
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:59215/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:42.358
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:59215/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:42.363
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:59215/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:44.381
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:59215/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:44.382
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.TextMessageWriter - Failed writing message to stream. URL: http://localhost:59215/cloud-slave/debug/connect   . Reason: Connection refused: connect
+
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1283)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1258)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.getOutputStream(HttpURLConnectionWrapper.java:184)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.getOutputStream(TextMessageWriter.java:382)
+	at com.capeclear.capeconnect.transport.http.TextMessageWriter.writeFrom(TextMessageWriter.java:235)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.writeTo(HttpTransport.java:591)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.messageToRequest(HttpTransport.java:562)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:327)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyClient.sendMessageBasicAuth(AssemblyClient.java:102)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1401)
+	at com.workday.remote.api.client.internal.rest.impl.RemoteHelper.call(RemoteHelper.java:122)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:141)
+	at com.workday.remote.api.client.requests.RemoteRequest.perform(RemoteRequest.java:350)
+	at com.workday.assembly.debug.api.DebugInterfaceImpl$1.runInWorkspace(DebugInterfaceImpl.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:45.389
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:59215/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:45.389
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:59215/cloud-slave/debug/connect. Reason: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:45.390
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect, first attempt (UTC): 2018-11-30T13:28:37.280Z, first attempt (CET): 2018-11-30T14:28:37.280+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 8108, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:45.391
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: com.capeclear.capeconnect.transport.TransportException: I/O Error in writing message to http://localhost:59215/cloud-slave/debug/connect - Connection refused: connect, first attempt (UTC): 2018-11-30T13:28:37.280Z, first attempt (CET): 2018-11-30T14:28:37.280+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 8108, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=3d0c1c42-1a39-405f-2a76-79642a31062a)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:45.394
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.workday.esb.stats.HttpOutErrorStatsRecorder - Unable to log HttpOutError stats, failed to create StatsManager due to org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stats-manager' defined in class path resource [spring/stats-beans.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.workday.stats.impl.StatsManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/workday/kafka/stats/IKafkaStatsMetadataProvider
+[Ljava.lang.StackTraceElement;@1dd37381
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:45.395
+!MESSAGE WARN Worker-36 HttpTransport endpoint= http://localhost:59215/cloud-slave/debug/connect com.workday.esb.stats.HttpOutErrorStatsRecorder - Unable to log HttpOutError stats, failed to create StatsManager due to org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stats-manager' defined in class path resource [spring/stats-beans.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.workday.stats.impl.StatsManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/workday/kafka/stats/IKafkaStatsMetadataProvider
+[Ljava.lang.StackTraceElement;@1dd37381
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:47.660
+!MESSAGE WARN Worker-37 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because exception does not qualify: BadRequestException : 
+Error code : notfound
+Response :No such request=c5e001dae52701b24a084412c31bb946
+
+com.capeclear.capeconnect.transport.BadRequestException: error from returned HTTP status: 404 Not Found URL=http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true, first attempt (UTC): 2018-11-30T13:28:47.648Z, first attempt (CET): 2018-11-30T14:28:47.648+01:00, responseTimeout: 300000, retryDelay: 1000 (esbHttpRequestId=19176d0e-116e-4651-0757-007d0a4a7e13)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:28:47.660
+!MESSAGE WARN Worker-37 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because exception does not qualify: BadRequestException : 
+Error code : notfound
+Response :No such request=c5e001dae52701b24a084412c31bb946
+
+com.capeclear.capeconnect.transport.BadRequestException: error from returned HTTP status: 404 Not Found URL=http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true, first attempt (UTC): 2018-11-30T13:28:47.648Z, first attempt (CET): 2018-11-30T14:28:47.648+01:00, responseTimeout: 300000, retryDelay: 1000 (esbHttpRequestId=19176d0e-116e-4651-0757-007d0a4a7e13)
+
+
+!ENTRY com.workday.assembly.debug.core 2 0 2018-11-30 14:28:47.662
+!MESSAGE Unable to retrieve debug process state: error from returned HTTP status: 404 Not Found URL=http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true
+!STACK 0
+BadRequestException : 
+Error code : notfound
+Response :No such request=c5e001dae52701b24a084412c31bb946
+
+com.capeclear.capeconnect.transport.BadRequestException: error from returned HTTP status: 404 Not Found URL=http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true
+	at com.capeclear.capeconnect.transport.http.client.AbstractHttpClient.doCheckStatus(AbstractHttpClient.java:95)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.checkStatus(HttpURLConnectionWrapper.java:255)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:348)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1371)
+	at com.workday.mediation.slave.client.SlaveClient.doSendMessage(SlaveClient.java:716)
+	at com.workday.mediation.slave.client.SlaveClient.sendMessage(SlaveClient.java:708)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:907)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:868)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:861)
+	at com.workday.cloud.api.client.internal.SlaveClientFacadeImpl.getRequestAsMessage(SlaveClientFacadeImpl.java:81)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getRequestAsMessage(RemoteProcessStateProviderImpl.java:252)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getProcessStatus(RemoteProcessStateProviderImpl.java:98)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:62)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:56)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.check(DebugProcessMonitor.java:218)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.access$1(DebugProcessMonitor.java:212)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor$Checker.run(DebugProcessMonitor.java:80)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor$1.run(DebugProcessMonitor.java:202)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.capeclear.wtp.assembly.debug 1 0 2018-11-30 14:29:26.169
+!MESSAGE Debug checker thread: stop requested
+
+!ENTRY com.capeclear.wtp.assembly.debug 1 0 2018-11-30 14:29:26.275
+!MESSAGE Debug checker thread exited, checkForEvents=false
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:27.233
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:27.233
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 1 of 3 failed sending request to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:29.249
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:29.254
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 2 of 3 failed sending request to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect : Retrying in 1000 msec. (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:31.274
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:31.282
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Attempt 3 of 3 failed sending request to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true. Reason: java.net.ConnectException: Connection refused: connect (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:31.286
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: java.net.ConnectException: Connection refused: connect, first attempt (UTC): 2018-11-30T13:29:26.221Z, first attempt (CET): 2018-11-30T14:29:26.221+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 5049, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY cc-log4j 2 30000 2018-11-30 14:29:31.287
+!MESSAGE WARN qtp44293675-226 HttpTransport endpoint= http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true com.capeclear.capeconnect.transport.http.client.HttpRetryControl - Not retrying because all retries exhausted, exception: java.net.ConnectException: Connection refused: connect, first attempt (UTC): 2018-11-30T13:29:26.221Z, first attempt (CET): 2018-11-30T14:29:26.221+01:00, max allowed retries: 2, actual retries performed: 3, retryDelay: 1000, connectTimeout (ms): 30000, responseTimeout (ms): 300000, totalElapsedTime (ms): 5049, totalAllowedTime (ms): 299000, tenant: null, integration: null (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+
+
+!ENTRY com.workday.assembly.debug.core 2 0 2018-11-30 14:29:31.288
+!MESSAGE Unable to retrieve debug process state: Http Out transport id=CT-h1 encountered error sending to endpoint http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true
+!STACK 0
+com.capeclear.mediation.MediationException: Http Out transport id=CT-h1 encountered error sending to endpoint http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:478)
+	at com.capeclear.mediation.impl.cc.MediationTube.doProcessRequest(MediationTube.java:140)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:96)
+	at com.capeclear.mediation.impl.cc.MediationTube.processRequest(MediationTube.java:35)
+	at com.sun.tubes.Fiber.__doRun(Fiber.java:602)
+	at com.sun.tubes.Fiber._doRun(Fiber.java:556)
+	at com.sun.tubes.Fiber.doRun(Fiber.java:541)
+	at com.sun.tubes.Fiber.runSync(Fiber.java:435)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.doProcessMessage(DefaultMediationMessageProcessor.java:513)
+	at com.capeclear.mediation.impl.DefaultMediationMessageProcessor.process(DefaultMediationMessageProcessor.java:309)
+	at com.capeclear.assembly.impl.AssemblyClient.doSendMessage(AssemblyClient.java:162)
+	at com.capeclear.assembly.impl.AssemblyClient.sendSecureMessage(AssemblyClient.java:151)
+	at com.capeclear.assembly.impl.AssemblyUtils.sendMessage(AssemblyUtils.java:1371)
+	at com.workday.mediation.slave.client.SlaveClient.doSendMessage(SlaveClient.java:716)
+	at com.workday.mediation.slave.client.SlaveClient.sendMessage(SlaveClient.java:708)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:907)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:868)
+	at com.workday.mediation.slave.client.SlaveClient.getRequestAsMessage(SlaveClient.java:861)
+	at com.workday.cloud.api.client.internal.SlaveClientFacadeImpl.getRequestAsMessage(SlaveClientFacadeImpl.java:81)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getRequestAsMessage(RemoteProcessStateProviderImpl.java:252)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getProcessStatus(RemoteProcessStateProviderImpl.java:98)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:62)
+	at com.workday.assembly.debug.core.monitor.RemoteProcessStateProviderImpl.getStatus(RemoteProcessStateProviderImpl.java:56)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.notifyForProcess(DebugProcessMonitor.java:377)
+	at com.workday.assembly.debug.core.launch.Cleaner.onCleanup(Cleaner.java:38)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.onCleanup(AssemblyDebugTarget.java:287)
+	at com.capeclear.wtp.assembly.debug.model.AssemblyDebugTarget.terminate(AssemblyDebugTarget.java:1104)
+	at com.workday.assembly.debug.core.monitor.AbstractDebugProcess.terminate(AbstractDebugProcess.java:230)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.notifyForProcess(DebugProcessMonitor.java:418)
+	at com.workday.assembly.debug.core.monitor.DebugProcessMonitor.completionCallback(DebugProcessMonitor.java:336)
+	at com.workday.assembly.debug.core.monitor.CallbackServlet.doPost(CallbackServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:278)
+	at org.eclipse.jetty.io.ssl.SslConnection$3.succeeded(SslConnection.java:148)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.capeclear.capeconnect.transport.TransportException: An I/O error occurred sending to http://localhost:59215/cloud-slave/requests/c5e001dae52701b24a084412c31bb946?includeAuditLogs=true&includeESBLog=true: Connection refused: connect (esbHttpRequestId=3b761f0d-6e52-4a01-2b15-6b5517436b23)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:157)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendWithRetry(HttpTransport.java:276)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendAndReceive(HttpTransport.java:195)
+	at com.capeclear.transport.impl.http.HttpOutTransport.processRequest(HttpOutTransport.java:457)
+	... 61 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.capeclear.capeconnect.transport.http.client.HttpURLConnectionWrapper.setResponseStatus(HttpURLConnectionWrapper.java:289)
+	at com.capeclear.capeconnect.transport.http.client.HttpTransport.sendImpl(HttpTransport.java:347)
+	at com.capeclear.capeconnect.transport.http.client.HttpSendWithRetry.sendWithRetry(HttpSendWithRetry.java:79)
+	... 64 more
+
+!ENTRY com.workday.sh.sa.update 4 0 2018-11-30 14:52:08.027
+!MESSAGE Connection reset
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:704)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:675)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at java.net.URL.openStream(URL.java:1045)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.readVersion(CheckForStudioUpdates.scala:80)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates.checkForStudioUpdates(CheckForStudioUpdates.scala:48)
+	at com.workday.sh.sa.update.internal.CheckForStudioUpdates$$anon$1.run(CheckForStudioUpdates.scala:31)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.jface 4 0 2018-11-30 15:14:33.415
+!MESSAGE /icons/full/obj16/fldr_obj.gif
+!STACK 0
+java.io.FileNotFoundException: /icons/full/obj16/fldr_obj.gif
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
+	at java.net.URL.openConnection(URL.java:979)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:112)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:237)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:34)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:207)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:230)
+	at org.eclipse.jface.resource.URLImageDescriptor.access$2(URLImageDescriptor.java:218)
+	at org.eclipse.jface.resource.URLImageDescriptor$URLImageFileNameProvider.getImagePath(URLImageDescriptor.java:54)
+	at org.eclipse.swt.internal.DPIUtil.validateAndGetImagePathAtZoom(DPIUtil.java:408)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:686)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:261)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:180)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:52)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:85)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:69)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:85)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.getImage(AbstractContributionItem.java:148)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.updateIcons(AbstractContributionItem.java:174)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.update(AbstractContributionItem.java:124)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.fill(AbstractContributionItem.java:261)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:728)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:810)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:472)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5204)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4872)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5191)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2555)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4941)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2555)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4941)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2560)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3815)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.eclipse.jface 4 0 2018-11-30 15:14:33.418
+!MESSAGE /icons/full/obj16/prj_obj.gif
+!STACK 0
+java.io.FileNotFoundException: /icons/full/obj16/prj_obj.gif
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:49)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
+	at java.net.URL.openConnection(URL.java:979)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:112)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:237)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:34)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:207)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:230)
+	at org.eclipse.jface.resource.URLImageDescriptor.access$2(URLImageDescriptor.java:218)
+	at org.eclipse.jface.resource.URLImageDescriptor$URLImageFileNameProvider.getImagePath(URLImageDescriptor.java:54)
+	at org.eclipse.swt.internal.DPIUtil.validateAndGetImagePathAtZoom(DPIUtil.java:408)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:686)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:261)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:180)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:52)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:85)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:69)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:85)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.getImage(AbstractContributionItem.java:148)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.updateIcons(AbstractContributionItem.java:174)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.update(AbstractContributionItem.java:124)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.fill(AbstractContributionItem.java:261)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:728)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:810)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:472)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5204)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4872)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5191)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2555)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4941)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2555)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:506)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4941)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2560)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3815)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)

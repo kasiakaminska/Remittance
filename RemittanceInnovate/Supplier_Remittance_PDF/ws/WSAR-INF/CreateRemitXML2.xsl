@@ -130,10 +130,12 @@
                     	<xsl:value-of select="$p.sup.email"/>
                     </wd:SupplierEmail>                    
                 </wd:Remittance_Header>
-                                
-                <xsl:for-each select="wd:Remittance_Data/wd:Document_Remittance_Data">
-               		<xsl:variable name="hashKey" select="wd:Document_ID"/>
-                    <wd:Payment_Details>
+                
+                   
+                         
+                <xsl:for-each select="wd:Remittance_Data/wd:Document_Remittance_Data">  
+                <xsl:variable name="hashKey" select="position()"/>                 
+               		  <wd:Payment_Details>
                         <wd:Invoice_Number>
                             <xsl:value-of select="wd:Document_Reference"/>
                         </wd:Invoice_Number>
@@ -162,7 +164,7 @@
 	                    	<xsl:value-of select="$p.sup.cat"/>
 	                    </wd:SupplierCategory>	                    
                     </wd:Payment_Details>   
-                    <!--   <xsl:variable name="hashKey" select="$hashKey + 1"/>      -->      
+                    <!-- <xsl:variable name="hashKey" select="$hashKey + 1"/>     --> 
                 </xsl:for-each>    
                 
                 
